@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+
+    "name": "Party Time!",
+    "description": "Push the button to start the party!",
+    "version": "1.0.0",
+
+    "permissions": ["activeTab", "http://*/"],
+
+    "icons": {
+        "16": "images/Disco_ball16.png",
+        "48": "images/Disco_ball48.png",
+        "128": "images/Disco_ball128.png"
+    },
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["party.js"],
+        "run_at": "document_end"
+    }]
+}
